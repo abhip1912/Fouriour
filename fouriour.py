@@ -50,7 +50,7 @@ while True:
     pen4.up()
     pen4.goto(count, y)
     pen4.down()
-    pen4.dot(2, 'white')
+    pen4.dot(5, 'white')
     pen3.goto(x, y)
     pen2.goto(x, y)
     time -= 0.0001*Animation_speed    # -= clockwise  && += Anticlockwise
