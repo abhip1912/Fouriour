@@ -2,9 +2,8 @@ import turtle
 from math import cos, sin
 
 time = 0
-radius = 200
-speed = 20
-
+radius = 100
+Animation_speed = 1000
 screen = turtle.Screen()
 screen.setup(width=1.0, height=1.0)
 screen.bgcolor('black')
@@ -28,11 +27,18 @@ pen3.color('white')
 pen3.speed(0)
 pen3.hideturtle()
 
+pen4 = turtle.Turtle()
+pen4.pensize(1)
+pen4.color('white')
+pen4.speed(0)
+pen4.hideturtle()
+
 pen1.up()
 pen1.sety(-radius)
 pen1.down()
 pen1.circle(radius)
 
+count = 0
 while True:
     pen3.goto(0, 0)
     pen3.dot(15)
@@ -41,8 +47,13 @@ while True:
     screen.update()
     x = radius * cos(time)
     y = radius * sin(time)
+    pen4.up()
+    pen4.goto(count, y)
+    pen4.down()
+    pen4.dot(2, 'white')
     pen3.goto(x, y)
     pen2.goto(x, y)
-    time += 0.0001*speed
+    time += 0.0001*Animation_speed    # -= clockwise  && += Anticlockwise
     pen3.clear()
+    count += 1
 screen.exitonclick()
