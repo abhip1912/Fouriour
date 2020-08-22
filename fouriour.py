@@ -53,7 +53,7 @@ while True:
     pen4.dot(2, 'white')
     pen3.goto(x, y)
     pen2.goto(x, y)
-    time += 0.0001*Animation_speed    # -= clockwise  && += Anticlockwise
+    time -= 0.0001*Animation_speed    # -= clockwise  && += Anticlockwise
     pen3.clear()
     count += 1
 screen.exitonclick()
