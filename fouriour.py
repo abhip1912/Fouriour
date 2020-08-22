@@ -35,6 +35,7 @@ pen1.circle(radius)
 
 while True:
     pen3.goto(0, 0)
+    pen3.dot(15)
     pen2.clear()
     pen2.dot(15, 'white')
     screen.update()
@@ -43,5 +44,5 @@ while True:
     pen3.goto(x, y)
     pen2.goto(x, y)
     time += 0.0001*speed
-    # pen3.clear()
+    pen3.clear()
 screen.exitonclick()
